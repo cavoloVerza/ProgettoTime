@@ -60,18 +60,98 @@ public class Time {
         
     }
 
+    /**
+     * Vengono addizionati il numero di secondi specificati.
+     * @param secondi -
+     */
+
+     public void addSecondi(int secondi) {
+
+        this.secondi += secondi; 
+
+    }
+
+    /**
+     * Esprime le ore, i minuti e i secondi dell'oggetto Time in secondi.
+     * @return il numero totale dei secondi
+     */
+
+    public int convertiSecondi() {
+
+        int newMinuti = ore * 60 + minuti;
+        int totSec = secondi + newMinuti * 60;
+
+        return totSec;
+
+    }
+
+    /**
+     * Restituisce il numero di minuti
+     * @return il numero di minuti dell'oggetto Time 
+     */
+
     public int getMinuti() {
         return minuti;
     }
+
+    /**
+     * Restituisce il numero delle ore
+     * @return il numero di ore dell'oggetto Time
+     */
 
     public int getOre() {
         return ore;
     }
 
+    /**
+     * Restituisce il numero di secondi
+     * @return il numero di secondi dell'oggetto Time
+     */
+
     public int getSecondi() {
         return secondi;
     }
 
-    
-    
+    /**
+     * @deprecated
+     * @param minuti -
+     */
+
+    public void setMinuti(int minuti) {
+        this.minuti = minuti;
+    }
+
+    /**
+     * @deprecated
+     * @param ore
+     */
+
+    public void setOre(int ore) {
+        this.ore = ore;
+    }
+
+    /**
+     * @deprecated
+     * @param secondi
+     */
+
+    public void setSecondi(int secondi) {
+        this.secondi = secondi;
+    }
+
+    /**
+     * Restituisce una stringa che rappresenta l'oggetto
+     * @return Rappresentazione testuale dell'oggetto Time {ore:minuti:secondi}
+     */
+
+    @Override
+    public String toString() {
+
+        String s = "Ore: " + ore + ", Minuti: " + minuti + ", secondi: " + secondi;
+        s += "In secondi: " + convertiSecondi();
+
+        return s;
+
+    }
+
 }
