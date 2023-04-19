@@ -2,7 +2,7 @@ public class Time {
 
     /**
      * La classe rappresenta e gestisce dati di tipo temporale
-    */
+     */
 
     /**
      * numero di minuti dell'oggetto Time
